@@ -8,6 +8,7 @@ namespace GreekIslands.Controllers
 {
     public class HomeController : Controller
     {
+        private IslandsModelEntities db = new IslandsModelEntities();
         public ActionResult Index()
         {
             return View();
