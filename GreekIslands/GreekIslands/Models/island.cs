@@ -11,6 +11,7 @@ namespace GreekIslands.Models
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
     
     public partial class island
     {
@@ -19,6 +20,8 @@ namespace GreekIslands.Models
         public string Name { get; set; }
         public string Capital { get; set; }
         public string Region { get; set; }
+
+        [Display(Name = "Best for")]
         public string BestFor { get; set; }
     }
 }

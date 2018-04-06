@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using System.Linq;
 using System.Web.Mvc;
+using System.
 
 namespace GreekIslands.Controllers
 {
@@ -11,6 +9,7 @@ namespace GreekIslands.Controllers
         private IslandsModelEntities db = new IslandsModelEntities();
         public ActionResult Index()
         {
+            var islands = 
             return View();
         }
 
