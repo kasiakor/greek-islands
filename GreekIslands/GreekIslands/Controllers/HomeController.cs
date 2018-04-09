@@ -19,6 +19,11 @@ namespace GreekIslands.Controllers
             return View(islands);
         }
 
+        public ActionResult Create()
+        {
+            return View();
+        }
+
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";

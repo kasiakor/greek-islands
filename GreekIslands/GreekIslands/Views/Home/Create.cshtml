@@ -1,0 +1,33 @@
+﻿@model GreekIslands.Models.island
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h3>Add Island</h3>
+
+@using (Html.BeginForm())
+{
+    //m - the parameter in a lambda expression, could be any name, doesnt refer to any variable.
+    // A lambda expression is an anonymous function that can contain expressions and statements, and can be used to create delegates or expression tree types.
+    // the LabelFor() method can extract the actual property to which you are referring, => is c#
+    // Returns an HTML label element and the property name of the property that is represented by the specified expression.
+    @Html.LabelFor(m => m.Picture)
+    @Html.EditorFor(m => m.Picture)
+
+    @Html.LabelFor(m => m.Name)
+    @Html.EditorFor(m => m.Name)
+
+    @Html.LabelFor(m => m.Capital)
+    @Html.EditorFor(m => m.Capital)
+
+    @Html.LabelFor(m => m.Region)
+    @Html.EditorFor(m => m.Region)
+
+    @Html.LabelFor(m => m.BestFor)
+    @Html.EditorFor(m => m.BestFor)
+
+    <input type="submit" value="Create" />
+}
+
+@Html.ActionLink("Back to List", "Index")
