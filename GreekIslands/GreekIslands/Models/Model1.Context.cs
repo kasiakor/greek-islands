@@ -13,9 +13,9 @@ namespace GreekIslands.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class IslandsEntities : DbContext
+    public partial class IslandsModelsEntities : DbContext
     {
-        public IslandsEntities()
+        public IslandsModelsEntities()
             : base("name=IslandsEntities")
         {
         }
@@ -26,5 +26,6 @@ namespace GreekIslands.Models
         }
     
         public virtual DbSet<island> islands { get; set; }
+        public object Islands { get; internal set; }
     }
 }

@@ -1,16 +1,22 @@
-﻿using System.Linq;
+﻿using GreekIslands.Models;
+using System;
+using System.Collections.Generic;
+using System.Data.Entity;
+using System.Linq;
+using System.Net;
+using System.Web;
 using System.Web.Mvc;
-using System.
 
 namespace GreekIslands.Controllers
 {
     public class HomeController : Controller
     {
-        private IslandsModelEntities db = new IslandsModelEntities();
+        private IslandsModelsEntities db = new IslandsModelsEntities();
         public ActionResult Index()
         {
-            var islands = 
-            return View();
+            var islands = from i in db.islands
+                          select i;
+            return View(islands);
         }
 
         public ActionResult About()

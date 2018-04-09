@@ -12,7 +12,7 @@ namespace GreekIslands.Models
     using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
-    
+
     public partial class island
     {
         public int Id { get; set; }
