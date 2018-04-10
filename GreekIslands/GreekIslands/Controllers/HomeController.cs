@@ -54,6 +54,20 @@ namespace GreekIslands.Controllers
             return View(island);
         }
 
+        public ActionResult Delete(int id)
+        {
+            island island = db.islands.Find(id);
+            return View(island);
+        }
+
+        [HttpPost, ActionName("Delete")]
+        public ActionResult DeleteConfirmed(int id)
+        {
+            island island = db.islands.Find(id);
+            db.islands.Remove(island);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
