@@ -40,6 +40,14 @@ namespace GreekIslands.Controllers
             return View(island);
         }
 
+        [HttpPost]
+        public ActionResult Edit(island island)
+        {
+            db.Entry(island).State = EntityState.Modified;
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
         public ActionResult Details(int? id)
         {
             island island = db.islands.Find(id);
