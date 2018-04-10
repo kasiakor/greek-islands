@@ -23,7 +23,43 @@ textarea {
     max-width: 280px;
 }
 
+#footer {
+    background-color:#34608d;
+    width: 100%;
+}
+
+#footer p {
+    color: #ffffff;
+    margin: 10px;
+}
+
 dd {
    margin-left: 40px;
 }
+
+.table > tbody > tr > td {
+    border-top: none;
+}
+
+.table-responsive {
+    border: none;
+}
+
+.navbar-inverse {
+    background-color:#34608d;
+    border-color:#34608d;
+}
+
+a {
+    color: #34608d;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    color: #ffffff;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover {
+    color: #93c54b;
+}
+
 
