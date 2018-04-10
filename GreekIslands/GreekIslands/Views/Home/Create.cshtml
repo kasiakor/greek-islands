@@ -4,30 +4,57 @@
     ViewBag.Title = "Create";
 }
 
-<h3>Add Island</h3>
 
-@using (Html.BeginForm())
-{
-    //m - the parameter in a lambda expression, could be any name, doesnt refer to any variable.
+    @*//m - the parameter in a lambda expression, could be any name, doesnt refer to any variable.
     // A lambda expression is an anonymous function that can contain expressions and statements, and can be used to create delegates or expression tree types.
     // the LabelFor() method can extract the actual property to which you are referring, => is c#
-    // Returns an HTML label element and the property name of the property that is represented by the specified expression.
-    @Html.LabelFor(m => m.Picture)
-    @Html.EditorFor(m => m.Picture)
+    // Returns an HTML label element and the property name of the property that is represented by the specified expression.*@
 
-    @Html.LabelFor(m => m.Name)
-    @Html.EditorFor(m => m.Name)
+    @using (Html.BeginForm())
 
-    @Html.LabelFor(m => m.Capital)
-    @Html.EditorFor(m => m.Capital)
-
-    @Html.LabelFor(m => m.Region)
-    @Html.EditorFor(m => m.Region)
-
-    @Html.LabelFor(m => m.BestFor)
-    @Html.EditorFor(m => m.BestFor)
-
-    <input type="submit" value="Create" />
-}
-
-@Html.ActionLink("Back to List", "Index")
+    {
+        <div class="container">
+            <div class="row">
+                <p style="margin-top:30px;">Create New Island</p>
+            </div>
+            <form class="form-horizontal">
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Picture, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-4">
+                        @Html.EditorFor(m => m.Picture, new { htmlAttributes = new { @class = "form-control" } })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Name, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(m => m.Name, new { htmlAttributes = new { @class = "form-control" } })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Capital, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(m => m.Capital, new { htmlAttributes = new { @class = "form-control" } })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Region, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(m => m.Region, new { htmlAttributes = new { @class = "form-control" } })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.BestFor, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(m => m.BestFor, new { htmlAttributes = new { @class = "form-control" } })
+                    </div>
+                </div>
+                <div class="text-left">
+                    <input class="btn btn-success btn-sm" type="submit" value="Create" />
+                </div>
+            </form>
+        </div>
+    }
+            <div style="margin-top: 30px;">
+                @Html.ActionLink("Back to List", "Index")
+            </div>
+      
