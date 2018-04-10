@@ -23,6 +23,16 @@ namespace GreekIslands.Controllers
         {
             return View();
         }
+ 
+        [HttpPost]
+        
+        public ActionResult Create(island island)
+        {
+           
+                db.islands.Add(island);
+                db.SaveChanges();
+                return RedirectToAction("Index");   
+        }
 
         public ActionResult About()
         {
