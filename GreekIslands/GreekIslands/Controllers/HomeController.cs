@@ -34,6 +34,12 @@ namespace GreekIslands.Controllers
                 return RedirectToAction("Index");   
         }
 
+        public ActionResult Edit(int? id)
+        {
+            island island = db.islands.Find(id);
+            return View(island);
+        }
+
         public ActionResult Details(int? id)
         {
             island island = db.islands.Find(id);

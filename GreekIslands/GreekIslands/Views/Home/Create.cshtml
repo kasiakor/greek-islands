@@ -4,23 +4,21 @@
     ViewBag.Title = "Create";
 }
 
-
     @*//m - the parameter in a lambda expression, could be any name, doesnt refer to any variable.
     // A lambda expression is an anonymous function that can contain expressions and statements, and can be used to create delegates or expression tree types.
     // the LabelFor() method can extract the actual property to which you are referring, => is c#
     // Returns an HTML label element and the property name of the property that is represented by the specified expression.*@
+    <div class="container">
+        @using (Html.BeginForm())
 
-    @using (Html.BeginForm())
-
-    {
-        <div class="container">
+        {
             <div class="row">
                 <p style="margin-top:30px;">Create New Island</p>
             </div>
             <form class="form-horizontal">
                 <div class="form-group">
                     @Html.LabelFor(m => m.Picture, htmlAttributes: new { @class = "control-label col-md-2" })
-                    <div class="col-md-4">
+                    <div class="col-md-10">
                         @Html.EditorFor(m => m.Picture, new { htmlAttributes = new { @class = "form-control" } })
                     </div>
                 </div>
@@ -52,9 +50,8 @@
                     <input class="btn btn-success btn-sm" type="submit" value="Create" />
                 </div>
             </form>
+        }
+        <div style="margin-top: 30px;">
+            @Html.ActionLink("Back to List", "Index")
         </div>
-    }
-            <div style="margin-top: 30px;">
-                @Html.ActionLink("Back to List", "Index")
-            </div>
-      
+     </div>

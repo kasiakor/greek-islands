@@ -1,0 +1,53 @@
+﻿@model GreekIslands.Models.island
+
+@{
+    ViewBag.Title = "Edit";
+
+
+}<div class="container">
+    <div class="row">
+        <p style="margin-top:30px;">Edit the Details of the Island</p>
+    </div>
+     @using (Html.BeginForm())
+     {
+
+        <form class="form-horizontal">
+            <div class="form-group">
+                @Html.LabelFor(m => m.Picture, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(m => m.Picture, new { htmlAttributes = new { @class = "form-control" } })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.Name, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(m => m.Name, new { htmlAttributes = new { @class = "form-control" } })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.Capital, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(m => m.Capital, new { htmlAttributes = new { @class = "form-control" } })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.Region, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(m => m.Region, new { htmlAttributes = new { @class = "form-control" } })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.BestFor, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(m => m.BestFor, new { htmlAttributes = new { @class = "form-control" } })
+                </div>
+            </div>
+            <div class="text-left">
+                <input class="btn btn-success btn-sm" type="submit" value="Save Changes" />
+            </div>
+        </form>  
+     } 
+     <div style="margin-top: 30px;">
+         @Html.ActionLink("Back to List", "Index")
+     </div> 
+</div>
