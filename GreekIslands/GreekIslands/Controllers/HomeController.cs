@@ -34,6 +34,12 @@ namespace GreekIslands.Controllers
                 return RedirectToAction("Index");   
         }
 
+        public ActionResult Details(int? id)
+        {
+            island island = db.islands.Find(id);
+            return View(island);
+        }
+
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
