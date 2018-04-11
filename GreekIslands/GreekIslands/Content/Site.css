@@ -111,3 +111,15 @@ a {
 
 }
 
+.navbar-inverse .navbar-toggle .icon-bar {
+    background-color: #ffffff;
+}
+
+.delete-button {
+    text-align: right;
+}
+
+.btn-warning {
+    font-size: 10px;
+}
+
