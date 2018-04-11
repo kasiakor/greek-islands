@@ -20,7 +20,7 @@
 input,
 select,
 textarea {
-    max-width: 280px;
+    max-width: none;
 }
 
 #footer {
@@ -66,4 +66,35 @@ a {
     color: #93c54b;
 }
 
+.add-button {
+    background-color: #34608d;
+    color: #ffffff;
+    margin-bottom: 7px;
+    font-size: 10px;
+}
 
+.add-button:hover {
+    color: #93c54b;
+}
+
+.form-control {
+    border: 1px solid #34608d;
+}
+
+.control-label {
+    color: #6a952d;
+    font-weight: 400;
+}
+
+.text-left {
+    text-align: right;
+}
+
+.create-button {
+    background-color: #34608d;
+    color: #ffffff;
+    font-size: 10px;
+}
+.create-button:hover {
+    color: #93c54b;
+}

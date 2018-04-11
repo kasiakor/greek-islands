@@ -5,11 +5,9 @@
     ViewBag.Title = "Index";
 }
 <div class="container">
-    <div class="row">
-        <p style="margin-top:30px;">
-            @Html.ActionLink("Create New Island", "Create")
-        </p>
-    </div>
+    <p style="margin-top:30px;">
+        @Html.ActionLink("Add Island", "Create", null, new { @class = "btn add-button" })
+    </p>
     <div class="table-responsive">
         <table class="table table-hover">
             <tr>
