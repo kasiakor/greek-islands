@@ -5,19 +5,17 @@
 
 
 }<div class="container">
-    <div class="row">
-        <p style="margin-top:30px;">Edit the Details of the Island</p>
-    </div>
-     @using (Html.BeginForm())
-     {
-
+        @*<p style="margin-top:30px;">Edit the Details of the Island</p>*@
+    <div style="max-width:280px; margin-top:30px; margin-right:auto; margin-left:auto;">
+        @using (Html.BeginForm())
+        {
         <form class="form-horizontal">
-            <div class="form-group">
+            @*<div class="form-group">
                 @Html.LabelFor(m => m.Picture, htmlAttributes: new { @class = "control-label col-md-2" })
                 <div class="col-md-10">
                     @Html.EditorFor(m => m.Picture, new { htmlAttributes = new { @class = "form-control" } })
                 </div>
-            </div>
+            </div>*@
             <div class="form-group">
                 @Html.LabelFor(m => m.Name, htmlAttributes: new { @class = "control-label col-md-2" })
                 <div class="col-md-10">
@@ -43,11 +41,12 @@
                 </div>
             </div>
             <div class="text-left">
-                <input class="btn btn-success btn-sm" type="submit" value="Save Changes" />
+                <input class="btn btn-sm create-button" type="submit" value="Save Changes" />
             </div>
-        </form>  
-     } 
-     <div style="margin-top: 30px;">
-         @Html.ActionLink("Back to List", "Index")
-     </div> 
+        </form>
+        }
+    </div>
+    <div style="margin-top: 30px; text-align:right;">
+        @Html.ActionLink("Back to List", "Index")
+    </div>
 </div>
