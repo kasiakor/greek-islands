@@ -14,6 +14,9 @@
 */
 .dl-horizontal dt {
     white-space: normal;
+    text-align: left;
+    color: #34608d;
+    font-weight: 600;
 }
 
 /* Set width on the form input elements since they're 100% wide by default */
@@ -98,3 +101,13 @@ a {
 .create-button:hover {
     color: #93c54b;
 }
+
+.column-name td {
+    font-size: 12px;
+    text-transform: uppercase;
+    padding: 0;
+    color: #34608d;
+    font-weight: 600;
+
+}
+
