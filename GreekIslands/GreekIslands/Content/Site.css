@@ -38,7 +38,11 @@ dd {
 }
 
 .table > tbody > tr > td {
-    border-top: none;
+    border-bottom: 35px solid #34608d;
+}
+
+.table > tbody > tr > td {
+    border-top: 35px solid #34608d;
 }
 
 .table-responsive {
