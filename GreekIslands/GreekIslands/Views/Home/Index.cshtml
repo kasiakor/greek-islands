@@ -13,11 +13,8 @@
     <div class="table-responsive">
         <table class="table table-hover">
             <tr>
-                <td>
-                    @*returns the display name for the specified model.*@
-                    @*Renders the Name property within the Display Attribute.*@
-                    @Html.DisplayNameFor(model => model.Picture)
-                </td>
+                @*returns the display name for the specified model.*@
+                @*Renders the Name property within the Display Attribute.*@
                 <td>
                     @Html.DisplayNameFor(model => model.Name)
                 </td>
@@ -38,12 +35,9 @@
             @foreach (var item in Model)
             {
                 <tr>
-                    <td>
-                        @*returns the markup for each of the properties within the model.*@
-                        @*Renders the actual contents of the Property specified.*@
+                    @*returns the markup for each of the properties within the model.*@
+                    @*Renders the actual contents of the Property specified.*@
 
-                        @Html.DisplayFor(m => item.Picture)
-                    </td>
                     <td>
                         @Html.DisplayFor(m => item.Name)
                     </td>
