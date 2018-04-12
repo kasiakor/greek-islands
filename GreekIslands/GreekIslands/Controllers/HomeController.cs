@@ -28,10 +28,13 @@ namespace GreekIslands.Controllers
         
         public ActionResult Create(island island)
         {
-           
-                db.islands.Add(island);
-                db.SaveChanges();
-                return RedirectToAction("Index");   
+            if (island.Picture == null)
+            {
+                island.Picture = "http://photosku.com/images_file/small_images/s005_958.jpg";
+            }
+            db.islands.Add(island);
+            db.SaveChanges();
+            return RedirectToAction("Index");   
         }
 
         public ActionResult Edit(int? id)
@@ -43,6 +46,10 @@ namespace GreekIslands.Controllers
         [HttpPost]
         public ActionResult Edit(island island)
         {
+            if (island.Picture == null)
+            {
+                island.Picture = "http://photosku.com/images_file/small_images/s005_958.jpg";
+            }
             db.Entry(island).State = EntityState.Modified;
             db.SaveChanges();
             return RedirectToAction("Index");
