@@ -1,12 +1,22 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
+    font-size: 22px;
 }
 
 /* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
+}
+
+
+.navbar-brand {
+    font-size: 35px;
+}
+
+.navbar .nav > li > a {
+    font-size: 16px;
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 
@@ -26,6 +36,7 @@ textarea {
     max-width: none;
 }
 
+
 #footer {
     background-color:#34608d;
     width: 100%;
@@ -41,11 +52,11 @@ dd {
 }
 
 .table > tbody > tr > td {
-    border-bottom: 35px solid #34608d;
+    border-bottom: 45px solid #34608d;
 }
 
 .table > tbody > tr > td {
-    border-top: 35px solid #34608d;
+    border-top: 45px solid #34608d;
 }
 
 .table-responsive {
@@ -73,7 +84,7 @@ a {
     background-color: #34608d;
     color: #ffffff;
     margin-bottom: 7px;
-    font-size: 10px;
+    font-size: 16px;
 }
 
 .add-button:hover {
@@ -82,6 +93,8 @@ a {
 
 .form-control {
     border: 1px solid #34608d;
+    margin: 40px 0;
+    font-size: 20px;
 }
 
 .control-label {
@@ -96,14 +109,14 @@ a {
 .create-button {
     background-color: #34608d;
     color: #ffffff;
-    font-size: 10px;
+    font-size: 16px;
 }
 .create-button:hover {
     color: #93c54b;
 }
 
 .column-name td {
-    font-size: 12px;
+    font-size: 25px;
     text-transform: uppercase;
     padding: 0;
     color: #34608d;

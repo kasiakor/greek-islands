@@ -6,13 +6,16 @@
 }
 <div class="container">
     <p style="margin-top:30px;">
-        @Html.ActionLink("Add Island", "Create", null, new { @class = "btn add-button" })
+        @Html.ActionLink("Add Island", "Create", null, new { @class = "btn btn-md add-button" })
     </p>
     <div class="table-responsive">
         <table class="table table-hover">
             <tr class="column-name">
                 @*returns the display name for the specified model.*@
                 @*Renders the Name property within the Display Attribute.*@
+                <td>
+                    @Html.DisplayNameFor(model => model.Picture)
+                </td>
                 <td>
                     @Html.DisplayNameFor(model => model.Name)
                 </td>
@@ -35,7 +38,9 @@
                 <tr>
                     @*returns the markup for each of the properties within the model.*@
                     @*Renders the actual contents of the Property specified.*@
-
+                    <td>
+                        <img src="@Url.Content(item.Picture)" height="40" width="55"/>
+                    </td>
                     <td>
                         @Html.DisplayFor(m => item.Name)
                     </td>
