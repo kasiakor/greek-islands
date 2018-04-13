@@ -61,6 +61,11 @@ namespace GreekIslands.Controllers
             return View(island);
         }
 
+        //public ActionResult Delete ()
+        //{
+        //    return RedirectToAction("Index");
+        //}
+
         public ActionResult Delete(int id)
         {
             island island = db.islands.Find(id);

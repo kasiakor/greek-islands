@@ -13,7 +13,8 @@
                 @Html.DisplayNameFor(m => m.Picture)
             </dt>
             <dd>
-                @Html.DisplayFor(m => m.Picture)
+                @*@Html.DisplayFor(m => m.Picture)*@
+                <img src="@Url.Content(Model.Picture)" height="100" />
             </dd>
             <dt>
                 @Html.DisplayNameFor(m => m.Name)
